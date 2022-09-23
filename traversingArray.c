@@ -1,35 +1,41 @@
-#include<stdio.h>
-
-
+#include <stdio.h>
 
 int main()
 {
 
+    int arrLength = 6;
+    int arr[3];
 
-int arrLength=10;
-int arr[arrLength];
+    arr[0] = 13;
+    arr[1] = 46;
+    arr[2] = 56;
+    arr[3] = 65;
+    arr[4] = 16;
+    arr[5] = 19;
 
+    // using for loop
 
-arr[0]=13;
-arr[1]=46;
-arr[2]=56;
+    /*
 
-for(int i=0; i <arrLength;i++){
-
- 
-
- printf("arr of %i is %i \n",i,arr[i]);
-
-}
-
+    for(int i=0; i <arrLength;i++){
 
 
-return 0;
-    
-    
-  
-    
-    
+
+     printf("arr of %i is %i \n",i,arr[i]);
+
     }
-    
-    
+    */
+
+    // Using While Loop
+
+    int i = 0;
+
+    while (i < arrLength)
+    {
+         printf("arr of %i is %i \n",i,arr[i]);
+
+         i++;
+    }
+
+    return 0;
+}
