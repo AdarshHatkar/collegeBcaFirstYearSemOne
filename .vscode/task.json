@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+    {
+        "label": "start",
+        "type": "shell",
+        "command": "gcc ${file};.\\a.exe",
+        "problemMatcher": []
+    }
+],
+"configurations": [ 
+
+]
+}

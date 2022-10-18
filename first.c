@@ -1,9 +1,7 @@
-# include <stdio.h>
+#include <stdio.h>
 
-int main(){
+void main()
+{
 
-    int tom;
-    printf("hello I am adarsh \n");
-    printf("i am a bca student");
-    return 0;
-}   
+    printf("Hello, \n I am Adarsh Balu Hatkar \n I am a BCA Student ");
+}
