@@ -3,5 +3,9 @@
 void main()
 {
 
-    printf("Hello, \n I am Adarsh Balu Hatkar \n I am a BCA Student ");
+    int a=10; 
+   
+  int*ptr=&a;
+
+    printf("%p",ptr);
 }
