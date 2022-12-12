@@ -13,7 +13,7 @@ void main()
     int arr[3]={0} , sizeOFArr, top = -1;
     sizeOFArr = sizeof(arr) / sizeof(arr[0]);
 
-    // scanArr(&arr,sizeOFArr);
+  
     printf("\n  initial stack \n top=%d \n",top);
 
     traverseArr(&arr, sizeOFArr);
