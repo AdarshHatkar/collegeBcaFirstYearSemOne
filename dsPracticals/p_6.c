@@ -1,11 +1,11 @@
 /*
-Implementation of insertion technique in array
+Implementation of deletion technique in array
 */
 
 #include <stdio.h>
 void scanArr(int*,int);
 void traverseArr(int*,int);
-void insertArr(int*,int);
+void deleteArr(int*,int);
 void main()
 {
 
@@ -13,13 +13,13 @@ int arr[7]={1,54,75,48,45},sizeOFArr;
 sizeOFArr = sizeof(arr)/sizeof(arr[0]);
 
 // scanArr(&arr,sizeOFArr);
-printf("before insertion \n");
+printf("before deletion \n");
 
 traverseArr(&arr,sizeOFArr);
 
-insertArr(&arr,sizeOFArr);
+deleteArr(&arr,sizeOFArr);
 
-printf("after insertion \n");
+printf("after deletion \n");
 
 traverseArr(&arr,sizeOFArr);
  
@@ -53,9 +53,9 @@ void traverseArr(int *arr,int size){
    printf("}");
    
 }
-void insertArr(int *arr,int size){
+void deleteArr(int *arr,int size){
 
-   int positionIndex,data;
+   int positionIndex;
    labelOne:
    printf("\n Enter Position Index \n ");
    scanf("%d",&positionIndex);
@@ -65,17 +65,18 @@ void insertArr(int *arr,int size){
      goto labelOne;
 
    }
-      printf("\n Enter data to add at arr[%d] \n ",positionIndex);
-   scanf("%d",&data);
+    
 
    // making space for new data 
-   for ( int i = size -1; i > positionIndex; i--)
+   for ( int i = positionIndex; i < size; i++)
    {
-    int * newArr = arr + i;
-
-    *newArr=*(newArr-1);
+    if(i==(size-1)){
+*(arr + i)=0;
+    }else{
+*(arr + i)=*(arr + i+1);
+    }
+    
    }
-      // inserting new data
-   *(arr+positionIndex)=data;
+  
    
 }
