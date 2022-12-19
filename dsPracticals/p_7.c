@@ -3,24 +3,26 @@ Implementation of Push and Pop Operation on stack
 */
 
 #include <stdio.h>
-
-
+//#include <conio.h>
 void traverseArr(int *, int);
 void push(int *, int, int *);
 void pop(int *, int, int *);
 void main()
-{ 
+{
     int arr[5] = {0}, sizeOFArr, top = -1, ii;
     sizeOFArr = sizeof(arr) / sizeof(arr[0]);
 
 startLabel:
-
+ printf("\n--------------------------");
     printf("\nSelect an Option\n");
     printf("1.push               2.pop\n");
     printf("3.display            4.exit\n");
 
     scanf("%d", &ii);
-    printf("\033[H\033[J") ;
+
+    // below line is alternative of clrscr()
+    // because vscode dont support clrscr
+    printf("\033[H\033[J");
     // clrscr();
 
     switch (ii)
@@ -37,17 +39,15 @@ startLabel:
         traverseArr(&arr, sizeOFArr);
         goto startLabel;
         break;
-        case 4:
-       
+    case 4:
+
         break;
 
     default:
-        printf("Invalid Option selected \n");
-         goto startLabel;
+        printf("Invalid Option selected \n Try Again \n");
+        goto startLabel;
         break;
     }
-
-  
 }
 
 void traverseArr(int *arr, int size)
