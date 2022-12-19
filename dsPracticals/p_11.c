@@ -1,5 +1,5 @@
 /*
-Implementation of Push and Pop Operation on stack
+Implementation of stack using Array
 Note:
 1) using pointer
 
@@ -7,11 +7,12 @@ Note:
 
 #include <stdio.h>
 //#include <conio.h>
-void traverseArr(int *, int);
+void display(int *, int);
 void push(int *, int, int *);
 void pop(int *, int, int *);
 void main()
 {
+    // initializing stack
     int arr[5] = {0}, sizeOFArr, top = -1, ii;
     sizeOFArr = sizeof(arr) / sizeof(arr[0]);
 
@@ -39,7 +40,7 @@ startLabel:
         goto startLabel;
         break;
     case 3:
-        traverseArr(&arr, sizeOFArr);
+        display(&arr, sizeOFArr);
         goto startLabel;
         break;
     case 4:
@@ -53,10 +54,10 @@ startLabel:
     }
 }
 
-void traverseArr(int *arr, int size)
+void display(int *arr, int size)
 {
 
-    printf("\n arr[%d]={", size);
+    printf("\n Stack[%d]={", size);
     for (int i = 0; i < size; i++, arr++)
     {
         if (i != 0)
