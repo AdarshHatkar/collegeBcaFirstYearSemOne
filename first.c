@@ -2,10 +2,13 @@
 
 void main()
 {
+  int i, n, sum = 0;
+  printf("Enter the Number \n");
+  scanf("%d", &n);
 
-    int a=10; 
-   
-  int*ptr=&a;
-
-    printf("%p",ptr);
+  for (i = 0; i <= n; i++)
+  {
+    sum = sum + i;
+  }
+  printf("Sum = %d", sum);
 }
