@@ -8,7 +8,7 @@ Property of Prime Number is it only divisible by one and it self
 /*
 Logic:
 if we want to check if any number is prime or not
-we will mod it with all the numbers from 2 to number -1
+we will mod it with all the numbers from 2 to number
 */
 
 #include <stdio.h>
