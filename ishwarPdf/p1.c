@@ -11,6 +11,7 @@ void main(){
   scanf("%d",&n);
 
   // using loop for printing table
+  
  printf("Table of %d\n",n);
   for(int i=1; i<=10; i++){
     printf("%d * %d = %d \n",n,i,n*i);
