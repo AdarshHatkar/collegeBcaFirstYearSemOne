@@ -2,7 +2,7 @@
 WAP for printing area of rectangle.
 */
 
-#include <stdio.h>
+#include<stdio.h>
 void main()
 {
     /*
