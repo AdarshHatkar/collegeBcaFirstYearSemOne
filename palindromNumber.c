@@ -1,50 +1,22 @@
 #include <stdio.h>
-int powerOfInt(int, int);
-int digitsInInt(int);
-int isIntEven(int);
-void main()
-{
+int main() {
+  int inputNumber, reversedNumber = 0, remainder, originalNumber;
+    printf("Enter an integer: ");
+    scanf("%d", &inputNumber);
+    originalNumber = inputNumber;
 
-    int userInput;
-    // printf("%d", isIntEven(100));
-    // printf("enter any Number \n => ");
-    // scanf("%i",&userInput);
-}
-
-int powerOfInt(int base, int power)
-{
-    int result = 1;
-    for (int i = power; i > 0; i--)
-    {
-        result *= base;
-        --power;
+    // getting reversed number
+    while (inputNumber != 0) {
+        remainder = inputNumber % 10;
+        reversedNumber = reversedNumber * 10 + remainder;
+        inputNumber /= 10;
     }
 
-    return result;
-}
+   
+    if (originalNumber == reversedNumber)
+        printf("%d is a palindrome.", originalNumber);
+    else
+        printf("%d is not a palindrome.", originalNumber);
 
-int digitsInInt(int number)
-{
-    int digits = 0, result;
-
-    for (int i = 0; i < 10; i++)
-    {
-
-        result = number / powerOfInt(10, i);
-        if (result == 0)
-        {
-            break;
-        }
-        digits++;
-    }
-    return digits;
-}
-int isIntEven(int number)
-{
-    int result = 0;
-    if (number % 2 == 0)
-    {
-        result = 1;
-    }
-    return result;
+    return 0;
 }
